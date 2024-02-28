@@ -3,12 +3,32 @@ def citireFisier(fileName):
         content = file.read()
     return content
 
-file = citireFisier("data.txt")
-print(file)
 
 def eliminareSemnePunctuatie(file):
-    new_s = ''.join([char for char in file if char not in ['.', '?', '!', ',', "'", '-', ';', ':']])
+    new_file = ''.join([char for char in file if char not in ['.', '?', '!', ',', "'", '-', ';', ':']])
+    return new_file
+
+
+def transformToUpper(file):
+    new_file = file.upper()
+    return new_file
+
+
+def stergereNumere(file):
+    new_s = ''.join([char for char in file if not char.isdigit()])
     return new_s
 
-new_file = eliminareSemnePunctuatie(file)
-print(new_file)
+
+def main():
+    file = citireFisier("data.txt")
+    elimSemne = eliminareSemnePunctuatie(file)
+    upperFile = transformToUpper(file)
+    filefaraNumere = stergereNumere(file)
+    print(f"Text file fara semne de punctuatie: {elimSemne}")
+    print(f"Text file fara numere: {filefaraNumere}")
+    print(f"Text file uppercase: {upperFile}")
+
+if __name__ == "__main__":
+    main()
+
+

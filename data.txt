@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Hello, world!
+=======
+sanea,-? este haros?!.
+>>>>>>> 9f6901d1e08f2597e3f346e1380d9cb985fbdd7b

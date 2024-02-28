@@ -25,8 +25,9 @@ def main():
     upperFile = transformToUpper(file)
     filefaraNumere = stergereNumere(file)
     print(f"Text file fara semne de punctuatie: {elimSemne}")
-    print(f"Text file fara numere: {filefaraNumere}")
     print(f"Text file uppercase: {upperFile}")
+    print(f"Text file fara numere: {filefaraNumere}")
+
 
 if __name__ == "__main__":
     main()
